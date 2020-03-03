@@ -1,12 +1,12 @@
 version: "3"
 
 services:
-   vsi-site:
+   borntobaja:
       image: wordpress:latest
       environment:
          - VIRTUAL_HOST=borntobaja.com,www.borntobaja.com
       volumes:
-         - ./php/vsi-site.ini:/usr/local/etc/php/conf.d/borntobaja.ini
+         - ./php/borntobaja.ini:/usr/local/etc/php/conf.d/borntobaja.ini
          - ./volumes/html:/var/www/html
    mysql:
       image: mysql:5.7
